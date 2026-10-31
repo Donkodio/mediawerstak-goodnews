@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Good News — только хорошие новости · MediaWerstak</title>
-<meta property="og:title" content="Good News — только хорошие новости · MediaWerstak">
-<meta property="og:description" content="Каждый день — наука, природа и люди, которые делают мир лучше. Без катастроф, политики и рынков.">
+<title>Хорошие новости · MediaWerstak</title>
+<meta property="og:title" content="Хорошие новости · MediaWerstak">
+<meta property="og:description" content="10 тематик, 7 площадок, ежедневный выход. Готовое решение для контента в соцсетях.">
 <link rel="canonical" href="https://goodnews.mediawerstak.com/">
-<meta property="og:url" content="https://goodnews.mediawerstak.com/">
 <meta property="og:image" content="bg.jpg">
 <style>
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 :root{
   --bg:#0B101B; --ink:#F3F5F9; --dim:#A2ADBE; --gold:#E9B16F; --mint:#68D8BC;
   --glass:rgba(255,255,255,.10); --glass2:rgba(255,255,255,.16); --line:rgba(255,255,255,.16);
@@ -19,15 +19,15 @@
 html,body{margin:0;min-height:100%}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,sans-serif;
-  color:var(--ink);background:var(--bg);overflow-x:hidden;
+  color:var(--ink);background:var(--bg);overflow-x:hidden;position:relative;isolation:isolate;min-height:100vh;min-height:100dvh;
 }
 body::before{
-  content:"";position:fixed;inset:0;z-index:-2;
-  background:url("bg.jpg") center/cover no-repeat;
+  content:"";position:fixed;inset:-12px;z-index:-2;
+  background:var(--topic-photo, url("bg.jpg")) center/cover no-repeat;filter:blur(4px);transform:scale(1.04);
 }
 body::after{
   content:"";position:fixed;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(6,9,17,.86) 0%,rgba(6,9,17,.58) 34%,rgba(6,9,17,.72) 68%,rgba(6,9,17,.94) 100%);
+  background:linear-gradient(180deg,rgba(6,9,17,.70) 0%,rgba(6,9,17,.48) 34%,rgba(6,9,17,.64) 68%,rgba(6,9,17,.90) 100%);
 }
 .wrap{max-width:520px;margin:0 auto;padding:max(24px,env(safe-area-inset-top)) 20px max(46px,env(safe-area-inset-bottom))}
 .hero{text-align:center;padding:6px 0 22px}
@@ -96,7 +96,7 @@ h1{font-size:34px;line-height:1.05;margin:14px 0 8px;letter-spacing:-.5px;font-w
 .row-txt b{font-size:14.5px;font-weight:650}
 .row-txt i{font-style:normal;font-size:11.5px;color:var(--dim)}
 .chev{color:var(--dim);font-size:18px}
-.soon{opacity:.55}
+.soon{opacity:1;color:#d5dce7;background:rgba(9,16,23,.68)}
 .soon-badge,.here{font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.12);color:#D9E0EB}
 .here{background:color-mix(in srgb,var(--tint) 34%,transparent);color:#fff;font-weight:650}
 .row.is-here{
@@ -129,11 +129,11 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
     <img class="logo" src="avatar.png" alt="">
     <h1>MediaWerstak</h1>
     <div class="tag">CONTENT FACTORY</div>
-    <p class="lead">Производим контент для соцсетей под ключ: 10 тематик × 7 площадок, контент-план, визуал и тексты. Готовое решение — берёшь и публикуешь.</p>
+    <p class="lead">Производим контент для соцсетей под ключ: тематические линкеры, визуал, тексты и контент-план. Подключённые профили и примеры оформления — в одном каталоге.</p>
     <div class="badges">
-      <span class="badge">10 тематик</span>
-      <span class="badge">7 площадок</span>
-      <span class="badge">выход каждый день</span>
+      <span class="badge">11 тематик</span>
+      <span class="badge">9 площадок</span>
+      <span class="badge">свой стиль</span>
       <span class="badge">источник у каждого факта</span>
     </div>
   </header>
@@ -154,7 +154,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Хорошие новости</span>
         <span class="card-desc">Что хорошего случилось в мире</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Есть профили</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="science" style="--tint:#80E8D2">
@@ -164,7 +164,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Наука и природа</span>
         <span class="card-desc">Открытия, животные, экология</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="glam" style="--tint:#FFAAC4">
@@ -176,7 +176,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Эстетика</span>
         <span class="card-desc">Стиль, вкус, ухоженность</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="world" style="--tint:#AABEFF">
@@ -187,7 +187,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Мир</span>
         <span class="card-desc">Люди и города, которые меняются</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="life" style="--tint:#FFCD8C">
@@ -196,7 +196,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Жизненное</span>
         <span class="card-desc">Тихие вещи, которые важны</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="facts" style="--tint:#96F0AA">
@@ -207,7 +207,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Факты</span>
         <span class="card-desc">Цифры, от которых тепло</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="business" style="--tint:#FFC850">
@@ -217,7 +217,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Бизнес</span>
         <span class="card-desc">Деньги как инструмент</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="health" style="--tint:#8CE6BE">
@@ -226,7 +226,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Здоровье</span>
         <span class="card-desc">Сон, свет, движение, еда</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="soul" style="--tint:#FFBA96">
@@ -236,7 +236,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Душевные цитаты</span>
         <span class="card-desc">Слова, которые остаются</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="bio" style="--tint:#A0C8FF">
@@ -245,7 +245,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Биохакинг</span>
         <span class="card-desc">Простые рычаги для тела</span>
-        <span class="card-count">2 поста</span>
+        <span class="card-count">Пример линкера</span>
         <span class="arrow">›</span>
       </button>
       <button class="card" data-open="mira" style="--tint:#E2C49B">
@@ -257,7 +257,7 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <span class="card-name">Mira Velsk</span>
         <span class="card-desc">Цифровая муза: эстетика, мода, тихие кадры</span>
-        <span class="card-count">1 поста</span>
+        <span class="card-count">Есть профили</span>
         <span class="arrow">›</span>
       </button>
   </div>
@@ -282,53 +282,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Хорошие новости</h2><p>Что хорошего случилось в мире</p></div>
       </div>
-      <div class="rows">
-        <a class="row" data-platform="telegram" href="https://t.me/goodnewstopic" target="_blank" rel="noopener">
+      <div class="rows"><a class="row" data-platform="telegram" href="https://t.me/goodnewstopic" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
           <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="instagram" href="https://www.instagram.com/goodnewstopic/" target="_blank" rel="noopener">
+          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="instagram" href="https://www.instagram.com/goodnewstopic/" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
           <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="threads" href="https://www.threads.com/@goodnewstopic" target="_blank" rel="noopener">
+          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="threads" href="https://www.threads.com/@goodnewstopic" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
           <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="youtube" href="https://www.youtube.com/@goodnewstopic" target="_blank" rel="noopener">
+          <span class="here" data-here="threads" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="youtube" href="https://www.youtube.com/@goodnewstopic" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
           <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="tiktok" href="https://www.tiktok.com/@goodnewstopic" target="_blank" rel="noopener">
+          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="tiktok" href="https://www.tiktok.com/@goodnewstopic" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
           <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="x" href="https://x.com/goodnewstopic" target="_blank" rel="noopener">
+          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="x" href="https://x.com/goodnewstopic" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
           <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="pinterest" href="https://www.pinterest.com/goodnewstopic/" target="_blank" rel="noopener">
+          <span class="here" data-here="x" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="pinterest" href="https://www.pinterest.com/goodnewstopic/" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
           <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="reddit" href="https://www.reddit.com/user/goodnewstopic2399/" target="_blank" rel="noopener">
+          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="reddit" href="https://www.reddit.com/user/goodnewstopic2399/" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
           <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="chev">›</span></a><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Хорошие новости» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Подтверждённые профили тематики «Хорошие новости».</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -429,53 +411,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Наука и природа</h2><p>Открытия, животные, экология</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Наука и природа» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Наука и природа». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -585,53 +549,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Эстетика</h2><p>Стиль, вкус, ухоженность</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Эстетика» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Эстетика». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -738,53 +684,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Мир</h2><p>Люди и города, которые меняются</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Мир» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Мир». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -890,53 +818,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Жизненное</h2><p>Тихие вещи, которые важны</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Жизненное» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Жизненное». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1046,53 +956,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Факты</h2><p>Цифры, от которых тепло</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Факты» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Факты». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1199,53 +1091,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Бизнес</h2><p>Деньги как инструмент</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Бизнес» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Бизнес». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1352,53 +1226,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Здоровье</h2><p>Сон, свет, движение, еда</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Здоровье» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Здоровье». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1507,53 +1363,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Душевные цитаты</h2><p>Слова, которые остаются</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Душевные цитаты» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Душевные цитаты». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1660,53 +1498,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Биохакинг</h2><p>Простые рычаги для тела</p></div>
       </div>
-      <div class="rows">
-        <a class="row soon" data-platform="telegram" href="#" aria-disabled="true">
+      <div class="rows"><div class="row soon" data-platform="telegram" aria-label="Telegram-канал: аккаунт пока не подключён">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
-          <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="instagram" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Telegram-канал</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="instagram" aria-label="Instagram: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-          <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="threads" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Instagram</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="threads" aria-label="Threads: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
-          <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="youtube" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Threads</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="youtube" aria-label="YouTube Shorts: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="tiktok" href="#" aria-disabled="true">
+          <span class="row-txt"><b>YouTube Shorts</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="tiktok" aria-label="TikTok: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-          <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="x" href="#" aria-disabled="true">
+          <span class="row-txt"><b>TikTok</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="x" aria-label="X (Twitter): аккаунт пока не подключён">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
-          <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="row-txt"><b>X (Twitter)</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="facebook" aria-label="Facebook: аккаунт пока не подключён">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
-          <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Биохакинг» — ищи её по названию в каждом профиле.</p>
+          <span class="row-txt"><b>Facebook</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div></div>
+      <p class="note">Пример оформления тематики «Биохакинг». Аккаунты пока не подключены.</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1817,53 +1637,35 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
 </svg></span>
         <div><h2>Mira Velsk</h2><p>Цифровая муза: эстетика, мода, тихие кадры</p></div>
       </div>
-      <div class="rows">
-        <a class="row" data-platform="telegram" href="https://t.me/miravelsk" target="_blank" rel="noopener">
+      <div class="rows"><a class="row" data-platform="telegram" href="https://t.me/miravelsk" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#2AABEE"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
           <span class="row-txt"><b>Telegram-канал</b><i>Главная площадка — там всё первым</i></span>
-          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="instagram" href="https://www.instagram.com/miravelsk/" target="_blank" rel="noopener">
+          <span class="here" data-here="telegram" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="instagram" href="https://www.instagram.com/miravelsk/" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#E1306C"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
           <span class="row-txt"><b>Instagram</b><i>Посты и Reels</i></span>
-          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="threads" href="https://www.threads.com/@miravelsk" target="_blank" rel="noopener">
+          <span class="here" data-here="instagram" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="threads" href="https://www.threads.com/@miravelsk" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Threads</title><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></span>
           <span class="row-txt"><b>Threads</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="threads" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="youtube" href="https://www.youtube.com/@miravelsk" target="_blank" rel="noopener">
+          <span class="here" data-here="threads" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="youtube" href="https://www.youtube.com/@miravelsk" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FF0033"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
           <span class="row-txt"><b>YouTube Shorts</b><i>Видео до минуты</i></span>
-          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="tiktok" href="https://www.tiktok.com/@miravelsk3" target="_blank" rel="noopener">
+          <span class="here" data-here="youtube" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="tiktok" href="https://www.tiktok.com/@miravelsk3" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
           <span class="row-txt"><b>TikTok</b><i>Короткие видео каждый день</i></span>
-          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row" data-platform="x" href="https://x.com/MiraVelsk" target="_blank" rel="noopener">
+          <span class="here" data-here="tiktok" hidden>вы здесь</span><span class="chev">›</span></a><a class="row" data-platform="x" href="https://x.com/MiraVelsk" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#FFFFFF"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>X</title><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></span>
           <span class="row-txt"><b>X (Twitter)</b><i>Короткие мысли</i></span>
-          <span class="here" data-here="x" hidden>вы здесь</span><span class="chev">›</span>
-        </a>
-        <a class="row soon" data-platform="pinterest" href="#" aria-disabled="true">
+          <span class="here" data-here="x" hidden>вы здесь</span><span class="chev">›</span></a><div class="row soon" data-platform="pinterest" aria-label="Pinterest: аккаунт пока не подключён">
           <span class="row-ico" style="color:#E60023"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Pinterest</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span>
-          <span class="row-txt"><b>Pinterest</b><i>Подборки-карточки</i></span>
-          <span class="here" data-here="pinterest" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="reddit" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Pinterest</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><div class="row soon" data-platform="reddit" aria-label="Reddit: аккаунт пока не подключён">
           <span class="row-ico" style="color:#FF4500"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 6.02 22.38c-.1-.82-.18-2.08.04-2.98.2-.82 1.28-5.22 1.28-5.22s-.33-.65-.33-1.62c0-1.52.88-2.65 1.98-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.44-2.05 3.44-5.01 0-2.62-1.88-4.45-4.57-4.45-3.11 0-4.94 2.33-4.94 4.74 0 .94.36 1.95.81 2.5.09.11.1.2.08.31-.09.36-.28 1.09-.31 1.24-.05.2-.16.24-.37.15-1.4-.65-2.27-2.7-2.27-4.34 0-3.53 2.57-6.78 7.4-6.78 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.44 6.98-5.82 6.98-1.14 0-2.2-.59-2.57-1.29l-.7 2.66c-.25.97-.93 2.18-1.39 2.92A12 12 0 1 0 12 0z"/></svg></span>
-          <span class="row-txt"><b>Reddit</b><i>Обсуждения и треды</i></span>
-          <span class="here" data-here="reddit" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a>
-        <a class="row soon" data-platform="facebook" href="#" aria-disabled="true">
+          <span class="row-txt"><b>Reddit</b><i>Место для профиля этой тематики</i></span>
+          <span class="soon-badge">не подключено</span></div><a class="row" data-platform="facebook" href="https://www.facebook.com/profile.php?id=100093574665815" target="_blank" rel="noopener noreferrer">
           <span class="row-ico" style="color:#1877F2"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
           <span class="row-txt"><b>Facebook</b><i>Сообщество и обсуждения</i></span>
-          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="soon-badge">скоро</span>
-        </a></div>
-      <p class="note">Это площадки тематики «Mira Velsk» — ищи её по названию в каждом профиле.</p>
+          <span class="here" data-here="facebook" hidden>вы здесь</span><span class="chev">›</span></a></div>
+      <p class="note">Подтверждённые профили тематики «Mira Velsk».</p>
 
       <div class="sect"><h3>Другие тематики</h3><span class="ln"></span></div>
       <div class="minis">
@@ -1960,12 +1762,12 @@ footer b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
   <footer>
     <b>MediaWerstak</b>
     Контент-завод · Not your feed · © 2026 MediaWerstak
-    <div class="pagenav"><a href="https://news.mediawerstak.com/">Линкер новостей</a>
-      <span>·</span><a href="https://mira.mediawerstak.com/">Наша модель</a>
-      <span>·</span><a href="https://link.mediawerstak.com/">Бренд</a></div>
+    <div style="margin-top:12px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a href="https://news.mediawerstak.com/">Новости</a>
+      <a href="https://mira.mediawerstak.com/">Модель</a>
+      <a href="https://link.mediawerstak.com/">Бренд</a>
+    </div>
   </footer>
-  <style>.pagenav{margin-top:10px;font-size:12px}.pagenav a{color:#E9B16F;text-decoration:none}
-  .pagenav span{opacity:.4;margin:0 6px}</style>
 </div>
 <script>
 const hero = document.getElementById('hero');
@@ -1973,7 +1775,10 @@ const sectAll = document.getElementById('sect-all');
 const grid = document.getElementById('grid');
 const screens = [...document.querySelectorAll('[data-screen]')];
 
+const topicBackgrounds = {"news": "https://mediawerstak.com/assets/linker/background-news.jpg", "science": "https://mediawerstak.com/assets/linker/background-science.jpg", "glam": "https://mediawerstak.com/assets/linker/background-glam.jpg", "world": "https://mediawerstak.com/assets/linker/background-world.jpg", "life": "https://mediawerstak.com/assets/linker/background-life.jpg", "facts": "https://mediawerstak.com/assets/linker/background-facts.jpg", "business": "https://mediawerstak.com/assets/linker/background-business.jpg", "health": "https://mediawerstak.com/assets/linker/background-health.jpg", "soul": "https://mediawerstak.com/assets/linker/background-soul.jpg", "bio": "https://mediawerstak.com/assets/linker/background-bio.jpg", "mira": "https://mira.mediawerstak.com/bg.jpg"};
 function showAll(){
+  document.body.style.removeProperty('--topic-photo');
+  document.body.dataset.topic = 'all';
   screens.forEach(s => s.hidden = true);
   grid.hidden = false; sectAll.hidden = false; hero.hidden = false;
   history.replaceState(null, '', location.pathname);
@@ -1982,6 +1787,9 @@ function showAll(){
 function openCat(key, from){
   const target = document.getElementById('cat-' + key);
   if(!target) return showAll();
+  document.body.dataset.topic = key;
+  document.title = target.querySelector('h2').textContent + ' · MediaWerstak';
+  document.body.style.setProperty('--topic-photo', 'url("' + topicBackgrounds[key] + '")');
   screens.forEach(s => s.hidden = s !== target);
   grid.hidden = true; sectAll.hidden = true; hero.hidden = true;
   target.querySelectorAll('.row').forEach(r => {
